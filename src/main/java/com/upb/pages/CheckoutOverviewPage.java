@@ -3,12 +3,9 @@ package com.upb.pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-/**
- * Page Object de la pagina de resumen del checkout (Overview).
- */
+
 public class CheckoutOverviewPage extends BasePage {
 
-    // Selectores
     private final By pageTitle = By.className("title");
     private final By finishButton = By.id("finish");
     private final By totalLabel = By.className("summary_total_label");

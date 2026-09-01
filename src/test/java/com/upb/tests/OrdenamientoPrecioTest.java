@@ -11,7 +11,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 /**
- * CP03 - Ordenamiento de productos por precio ascendente (low to high).
+ * Ordenamiento de productos por precio ascendente (low to high).
  * Verifica que al aplicar el filtro, los productos aparecen ordenados
  * de menor a mayor precio.
  */

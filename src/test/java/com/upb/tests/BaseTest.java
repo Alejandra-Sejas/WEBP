@@ -9,10 +9,6 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import java.util.HashMap;
 import java.util.Map;
 
-/**
- * Clase base para todos los tests.
- * Se encarga de inicializar y cerrar el WebDriver en cada test.
- */
 public class BaseTest {
 
     protected WebDriver driver;
@@ -24,8 +20,6 @@ public class BaseTest {
     @BeforeEach
     public void setUp() {
         ChromeOptions options = new ChromeOptions();
-
-        // Opciones generales para evitar popups molestos
         options.addArguments("--start-maximized");
         options.addArguments("--disable-notifications");
         options.addArguments("--disable-popup-blocking");
@@ -33,7 +27,7 @@ public class BaseTest {
         options.addArguments("--no-sandbox");
 
         // Deshabilita las funcionalidades de contraseñas de Chrome
-        // (esto quita el popup de "contraseña comprometida" que aparece con secret_sauce)
+        // nos ayudo con el mensaje que salia de contrase;a insegura
         options.addArguments("--disable-features=PasswordCheck,PasswordLeakDetection,AutofillServerCommunication");
         options.addArguments("--disable-save-password-bubble");
 

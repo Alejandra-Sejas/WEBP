@@ -12,7 +12,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 /**
- * CP04 - Agregar multiples productos al carrito.
+ * Agregar multiples productos al carrito.
  * Verifica que al agregar 2 productos, el badge muestre 2 y que en el carrito
  * aparezcan exactamente esos productos con los nombres correctos.
  */

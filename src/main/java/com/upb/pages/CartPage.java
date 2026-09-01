@@ -7,12 +7,9 @@ import org.openqa.selenium.WebElement;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Page Object del carrito de compras.
- */
+
 public class CartPage extends BasePage {
 
-    // Selectores
     private final By cartTitle = By.className("title");
     private final By cartItems = By.className("cart_item");
     private final By itemNames = By.className("inventory_item_name");
@@ -25,23 +22,14 @@ public class CartPage extends BasePage {
         waitForElement(cartTitle);
     }
 
-    /**
-     * Verifica que la pagina del carrito esta cargada.
-     */
     public boolean isLoaded() {
         return getText(cartTitle).equalsIgnoreCase("Your Cart");
     }
 
-    /**
-     * Devuelve la cantidad de items en el carrito.
-     */
     public int getItemsCount() {
         return driver.findElements(cartItems).size();
     }
 
-    /**
-     * Devuelve los nombres de los productos en el carrito.
-     */
     public List<String> getItemNames() {
         List<WebElement> nameElements = driver.findElements(itemNames);
         List<String> names = new ArrayList<>();

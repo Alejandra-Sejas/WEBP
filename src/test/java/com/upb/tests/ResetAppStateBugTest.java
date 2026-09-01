@@ -9,15 +9,13 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 /**
- * CP05 - Verificacion del bug: Reset App State no restablece los botones.
+ * Verificacion del bug: Reset App State no restablece los botones.
  *
- * BUG REPORTADO EN EL PRIMER PARCIAL (Severidad 3):
+ * bug del primer parcial L (Severidad 3):
  * "El sidebar Reset App State no funciona correctamente".
- *
  * Cuando se agregan productos al carrito y luego se ejecuta "Reset App State",
  * el badge del carrito SI se limpia (va a 0), pero los botones de los productos
  * agregados siguen mostrando "Remove" en lugar de volver a "Add to cart".
- *
  * Este test es de regresion: confirma que el bug se sigue reproduciendo.
  */
 public class ResetAppStateBugTest extends BaseTest {
@@ -44,8 +42,7 @@ public class ResetAppStateBugTest extends BaseTest {
         assertEquals("0", inventoryPage.getCartBadgeCount(),
                 "El badge del carrito deberia estar en 0 despues del reset");
 
-        // 5. BUG CONFIRMADO: el boton NO regreso a "Add to cart"
-        //    Lo esperado seria que dijera "Add to cart", pero sigue en "Remove".
+        // 5. BUG CONFIRMADO: el boton NO regreso a "Add to cart" Lo esperado seria que dijera "Add to cart", pero sigue en "Remove".
         String textoBoton = inventoryPage.getButtonText("sauce-labs-backpack");
         assertEquals("Remove", textoBoton,
                 "BUG CONFIRMADO: el boton sigue en Remove despues del reset (deberia estar en Add to cart)");

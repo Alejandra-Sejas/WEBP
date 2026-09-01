@@ -11,16 +11,11 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 /**
- * CP02 - Verificacion del bug: se permite hacer checkout con el carrito vacio.
- *
- * BUG REPORTADO EN EL PRIMER PARCIAL (Severidad 3):
- * "Se puede realizar el Checkout con el carrito vacio".
- *
+ * Verificacion del bug: se permite hacer checkout con el carrito vacio.
+ * bug del primer parcial "Se puede realizar el Checkout con el carrito vacio".
  * El sistema deberia bloquear el checkout si no hay productos en el carrito
  * y mostrar un mensaje de error, pero permite avanzar sin problema.
- *
  * Este test es un test de regresion: verifica que el bug sigue reproduciendose.
- * Si en el futuro arreglan el bug, este test fallara y sabremos que debe actualizarse.
  */
 public class CheckoutCarritoVacioBugTest extends BaseTest {
 
@@ -44,7 +39,7 @@ public class CheckoutCarritoVacioBugTest extends BaseTest {
         // 4. Hacer click en Checkout con el carrito vacio (aqui deberia bloquearse)
         CheckoutInfoPage infoPage = cartPage.clickCheckout();
 
-        // 5. Confirmar el BUG: el sistema PERMITIO avanzar al formulario
+        // 5. Confirmar el bug: el sistema PERMITIO avanzar al formulario
         //    El comportamiento correcto seria mostrar un mensaje de error.
         assertTrue(infoPage.isLoaded(),
                 "BUG CONFIRMADO: el sistema avanzo al checkout con carrito vacio");

@@ -8,7 +8,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 /**
- * CP01 - Flujo completo de checkout con un producto.
+ * Flujo completo de checkout con un producto.
  * Verifica el "happy path" de compra: agregar producto, ir al carrito,
  * llenar informacion, revisar y finalizar la compra.
  */
